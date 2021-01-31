@@ -1,14 +1,10 @@
 const mysql = require('mysql');
 // initiate db connection
-const connection = mysql.createConnection({
+const connection = mysql.createPool({
   host: "",
   user: "",
   password: "",
-  database: "digital_diary",
-});
-
-connection.connect(function(err) {
-  
+  database: "",
 });
 
 module.exports = connection
